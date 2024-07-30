@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrap {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .contain {
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container .heading h1 {
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+.card {
+  height: 20vh;
+  width: 10vw;
+  position: relative;
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+  padding: 50px;
+}
+.front {
+  background-color: #ffc006;
+  transition: all 1s;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.back {
+  color: #fff;
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+}
+.spin {
+  transform: rotateY(180deg);
+}
+.backSpin {
+  transform: rotateY(360deg);
+}
+@keyframes timer {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.animated-element {
+  height: 5px;
+  width: 0%;
+  background-color: greenyellow;
+  position: absolute;
+  left: 0;
+  /* animation: 30000ms linear 0s 1 normal none running timer; */
+}
+.backg {
+  background-color: rgba(0, 0, 0, 0.688);
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  position: absolute;
+}
+.failed {
+  box-sizing: border-box;
+  height: 40vh;
+  width: 100vw;
+  color: white;
+  position: absolute;
+  z-index: 5;
+  top: 30vh;
+  text-align: center;
+  padding: 8%;
+}
+.failed button {
+  height: 5vh;
+  width: 10vw;
+  margin-top: 40px;
+  border-radius: 30px;
+  color: white;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px white;
+}
+.start {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.start .name {
+  color: white;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50vh;
+  left: 6.5vw;
+  text-align: center;
+  width: 30vw;
+  text-wrap: wrap;
+  transform: rotatez(-45deg);
+}
+.start .buttons {
+  height: 30vh;
+  width: 15vw;
+  position: absolute;
+  right: 15vw;
+  top: 25vh;
+}
+.start .buttons .button1 {
+  font-size: 2rem;
+  height: 30vh;
+  width: 15vw;
+  background-image: linear-gradient(to right, rgb(0, 200, 255), blue, black);
+  color: #fff;
+  box-shadow: 0px 0px 20px white;
+}
+.start .buttons .play,
+.mode {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+.start .buttons .mode {
+  transform: rotateY(180deg);
+}
+.start .buttons .mode .button2,
+.button3,
+.button4 {
+  font-size: 2rem;
+  height: 10vh;
+  width: 15vw;
+  background-image: linear-gradient(to right, rgb(0, 200, 255), blue, black);
+  color: #fff;
+  box-shadow: 0px 0px 20px white;
+}
+.playSpin {
+  transform: rotateY(180deg);
+}
+.modeSpin {
+  transform: rotateY(360deg) !important;
+}
